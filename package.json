@@ -1,0 +1,30 @@
+{
+  "name": "dhbd-medusa-tracking",
+  "version": "0.0.1",
+  "description": "JS Medusa Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "medusa",
+    "tracker"
+  ],
+  "author": "Aleksandar Angeloski, Delivery Hero, Big Data Team",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "gulp": "^3.9.0",
+    "gulp-karma": "0.0.5",
+    "jasmine": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-browserify": "^4.4.2",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-mocha": "^0.2.1",
+    "karma-opera-launcher": "^0.3.0",
+    "karma-safari-launcher": "^0.1.1",
+    "mocha": "^2.3.4",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
