@@ -3,8 +3,8 @@
 * Stack: Gulp, npm, Browserify, Karma, Mocha and Chai
 
 ## Usage
-* '''npm install''' 
-* '''gulp install'''
-* '''gulp test'''  
-* '''gulp tdd''' 
-* '''gulp bundle''' 
+* ```npm install``` 
+* ```gulp install```
+* ```gulp test```  
+* ```gulp tdd``` 
+* ```gulp bundle``` 
