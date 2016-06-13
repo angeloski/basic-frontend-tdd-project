@@ -10,7 +10,7 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['browserify', 'mocha'],
+    frameworks: ['browserify', 'mocha', 'chai'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -18,7 +18,8 @@ module.exports = function(config) {
     ],
 
     browserify: {
-      debug: true
+      debug: true,
+      transform: ['browserify-istanbul']
     },
 
     // list of files to exclude
@@ -30,15 +31,21 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'test/**/*test.js': ['browserify']
+        'src/**/*.js': ['browserify'],
+        'test/**/*test.js': ['browserify']
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
 
 
+    coverageReporter: {
+        type: "text"
+    },
+
+    
     // web server port
     port: 9876,
 
@@ -56,13 +63,13 @@ module.exports = function(config) {
     autoWatch: true,
 
 
-
     browserNoActivityTimeout: 10000,
 
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'ChromeCanary', 'Opera', 'Safari'],
+    // browsers: ['Chrome', 'Firefox', 'ChromeCanary', 'Opera', 'Safari'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode
